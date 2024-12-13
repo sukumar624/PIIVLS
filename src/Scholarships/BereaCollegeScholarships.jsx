@@ -10,7 +10,7 @@ const BereaCollegeScholarships = () => {
     return (
         <div className="page_content">
             <div className="container">
-                <h2>Berea College Scholarships for International Students, United States</h2>
+                <h2>Berea College Scholarships for International Students, United States </h2>
                 <p><strong>Scholarship Amount Offered</strong>: Total tuition fee for bachelor’s programs for international students enrolled in the first year, which includes accommodation and lodging costs.  </p>
 
                 <p><strong>Start date</strong>: Fall 2024</p>
