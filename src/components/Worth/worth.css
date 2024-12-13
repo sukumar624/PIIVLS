@@ -1,0 +1,21 @@
+.worth_area {
+    background: linear-gradient(45deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('../../assets/images/about-breadcrumb.jpg') center no-repeat;
+    padding: 100px 0;
+    background-attachment: fixed;
+}
+
+.worth_area .sub_heading {
+    color: #fff;
+}
+
+.worth_area .sub_heading h2 {
+    color: #fff;
+}
+
+.worth_area .sub_heading h2 span {
+    color: tomato;
+}
+
+.worth_area .input_group label {
+    color: #fff;
+}

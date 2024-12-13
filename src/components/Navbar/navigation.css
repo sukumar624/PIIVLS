@@ -1,0 +1,119 @@
+/* 
+------------------------------------------------------------
+Navbar CSS
+------------------------------------------------------------
+*/
+.navbar {
+    background: var(--primary);
+    padding: 1rem;
+}
+
+
+.nav_links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-nav {
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_links li {
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.navbar .navbar-nav a {
+    padding: 14px 20px;
+    color: #fff;
+}
+
+.nav_links li a:hover {
+    color: #ccc;
+}
+
+/* Dropdown styling */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+}
+
+.dropdown_menu li a {
+    display: block;
+    padding: 0;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: rgb(255 120 0) !important;
+}
+
+.dropdown_menu li a:hover {
+    background: #555;
+    color: white;
+}
+
+/* Show dropdown when active */
+#navbarDropdown {
+    color: #fff;
+}
+
+.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: var(--primary) !important;
+    padding: 8px 15px !important;
+    display: block;
+    line-height: 1;
+    transition: .3s;
+}
+
+.dropdown-menu li:hover>a {
+    background: var(--primary) !important;
+    color: var(--bs-white) !important;
+}
+
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: #fff !important;
+    background-color: transparent;
+    border: var(--bs-border-width) solid #fff !important;
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+
+.active-link {
+    color: #ff6600 !important;
+    /* Change this color to whatever you prefer */
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav_links {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .dropdown_menu {
+        position: static;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+}

@@ -1,0 +1,1807 @@
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+/*
+------------------------------------------------------------
+Default CSS
+------------------------------------------------------------
+*/
+:root {
+  --bodyFont: "Open Sans", sans-serif;
+  --paraFont: "Mulish", sans-serif;
+  --primary: #2f2a60;
+  --silver: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+  --paraColor: #787878;
+  --background-color: #f9fcff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paraFont);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  display: block;
+}
+
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
+.bg_primary {
+  background: var(--primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary_bg {
+  background: var(--primary);
+}
+
+p {
+  text-align: justify;
+  font-family: var(--paraFont);
+}
+
+main {
+  padding-bottom: 150px;
+}
+
+/*
+------------------------------------------------------------
+Header CSS
+------------------------------------------------------------
+*/
+header.header {
+  padding: 10px 0;
+  background: var(--silver);
+}
+
+.header-wrapper div {
+  flex: 1;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header_logo img {
+  width: 200px;
+}
+
+.header_email {
+  display: flex;
+  justify-content: center;
+}
+
+.header_email a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+}
+
+.header_email img {
+  width: 30px;
+}
+
+.header_contact {
+  display: flex;
+  justify-content: end;
+}
+
+.header_contact a button {
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  padding: 12px 15px;
+  border-radius: 3px;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header_contact a button:hover {
+  background: var(--primary);
+  border-color: transparent;
+  color: var(--bs-white);
+}
+
+.header_contact a button i {
+  transition: .3s;
+}
+
+.header_contact a button:hover i {
+  transform: translateX(6px);
+  color: var(--bs-white);
+}
+
+
+
+
+
+/*
+------------------------------------------------------------
+Hero CSS
+------------------------------------------------------------
+*/
+
+
+.single_hero_slider {
+  position: relative;
+  z-index: 5;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.single_hero_slider::after {
+  content: "";
+  background: linear-gradient(to left, rgb(47 42 96 / 55%), rgb(11 0 116 / 88%));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero_content {
+  padding: 50px 0;
+}
+
+.hero_content>span {
+  color: #ffff;
+}
+
+.hero_content h1 {
+  font-size: 42px;
+  color: var(--bs-white);
+}
+
+.hero_content p {
+  color: #fff;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.hero_content a {
+  display: inline-block;
+}
+
+.hero_content a button {
+  border-color: var(--bs-white);
+  background: transparent;
+  padding: 12px 25px;
+  color: var(--bs-white);
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: .3s;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero_content a button::after {
+  content: "";
+  background: var(--bs-white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  transition: .3s;
+}
+
+.hero_content a:hover button {
+  border-color: transparent;
+  color: var(--primary);
+}
+
+.hero_content a:hover button::after {
+  top: 0;
+}
+
+.hero_slider {
+  position: relative;
+}
+
+.hero_slider .owl-nav button {
+  background: aliceblue !important;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 25px !important;
+  left: 15px;
+  transition: .3s;
+  opacity: 0;
+}
+
+.hero_slider:hover .owl-nav button {
+  opacity: 1;
+}
+
+.hero_slider .owl-nav button.owl-next {
+  left: auto;
+  right: 15px;
+}
+
+.hero_slider .owl-nav button:hover {
+  background: var(--primary) !important;
+  color: var(--bs-white) !important;
+}
+
+/*
+------------------------------------------------------------
+Free Assessment CSS
+------------------------------------------------------------
+*/
+
+
+.free_assessment {
+  position: relative;
+  top: -50px;
+  z-index: 9;
+}
+
+.assessment_wrapper {
+  background: var(--primary);
+  padding: 30px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 138px;
+  gap: 30px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(47 42 96 / 31%);
+}
+
+.assessment_title h2 {
+  margin-bottom: 0;
+  font-size: 38px;
+}
+
+/*
+------------------------------------------------------------
+Our Location CSS
+------------------------------------------------------------
+*/
+
+.our_location_area {
+  background: var(--silver);
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 88;
+  transition: .7s;
+}
+
+
+.location_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.single_location {
+  text-align: center;
+}
+
+.location_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.location_header img {
+  width: 35px;
+}
+
+.location_header h4 {
+  margin-bottom: 0;
+  font-size: 18px;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.location_info p {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+
+/*
+------------------------------------------------------------
+Service CSS
+------------------------------------------------------------
+*/
+
+.our_services {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.our_service_wrapper {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.our_category_wrapper {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.category_service {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, .1);
+}
+
+.service_img_area {
+  position: relative;
+}
+
+.service_img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service_img {
+  width: 100%;
+  height: 200px;
+}
+
+.service_info h4 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.service_info .custom_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid transparent;
+  background: var(--primary);
+  color: #fff;
+}
+
+.service_info .custom_btn:hover {
+  background: transparent;
+  border-color: var(--primary) !important;
+  color: var(--primary);
+}
+
+.service_info .custom_btn:hover i {
+  color: var(--primary);
+}
+
+/*
+------------------------------------------------------------
+Popular Services CSS
+------------------------------------------------------------
+*/
+
+.popular_country {
+  padding: 80px 0;
+}
+
+.country_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 25px;
+}
+
+.country-flag {
+  margin-bottom: 20px;
+}
+
+.country_wrapper .card {
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+
+.country_wrapper .card h4 {
+  font-family: var(--bodyFont);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.country_wrapper .card>ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.country_wrapper .card>ul::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+}
+
+.country_wrapper .card>ul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.country_wrapper .card>ul::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+}
+
+.country_wrapper .card>ul li a {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  text-decoration: none;
+  color: #121212;
+  font-size: 14px;
+  font-weight: 400;
+  transition: .3s;
+  font-family: var(--paraFont);
+}
+
+.country_wrapper .card>ul li:hover a {
+  color: var(--primary);
+  text-decoration: underline !important;
+}
+
+.country_wrapper .card>ul li a i {
+  color: var(--primary);
+  transition: .3s;
+}
+
+.country_wrapper .card>ul li:hover a i {
+  transform: translateX(6px);
+}
+
+/*
+------------------------------------------------------------
+News Section CSS
+------------------------------------------------------------
+*/
+.news_section {
+  padding: 80px 0;
+  background: var(--silver);
+}
+
+.news_section .card-body h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.news_section .card-body h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.news_footer {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.news_footer span {
+  color: #787878;
+}
+
+.news_footer a {
+  color: red;
+}
+
+/*
+------------------------------------------------------------
+Contact Section CSS
+------------------------------------------------------------
+*/
+.contact_section {
+  background: linear-gradient(to left, rgb(47 42 96 / 62%), rgb(33 20 155 / 86%)), url(assets/images/contact-bg.jpg) no-repeat center;
+  width: 100%;
+  padding: 120px 0;
+  margin-bottom: 80px;
+  background-attachment: fixed;
+}
+
+.contact_form {
+  background: rgba(255, 255, 255, .9);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.input_box {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 20px;
+}
+
+/*
+------------------------------------------------------------
+About page CSS
+------------------------------------------------------------
+*/
+.about_content_area {
+  padding: 80px 0 50px;
+}
+
+.about_info p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--paraFont);
+  text-align: justify;
+  line-height: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.about_info p:last-child {
+  margin-bottom: 0;
+}
+
+.directors_messages {
+  background: #f3f3f3dd;
+  padding: 50px 0 0;
+  padding-bottom: calc(98px + 80px);
+}
+
+.message_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 20px;
+}
+
+.message_list {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.director_img {
+  width: 100%;
+}
+
+.director_img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+.message_list .designation {
+  background: #3a1179;
+  text-align: center;
+  padding: 15px;
+  color: #ffff;
+}
+
+.message_list .designation h4 {
+  text-transform: math-auto;
+  font-weight: 600;
+  color: var(--bs-white);
+  font-family: var(--paraFont);
+  font-size: 18px;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.message_list .designation span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffa700;
+}
+
+/*
+------------------------------------------------------------
+Contact Page CSS
+------------------------------------------------------------
+*/
+.contact_area {
+  padding: 80px 0 0;
+  padding-bottom: calc(97px + 80px);
+  background: var(--silver);
+}
+
+.conatct_info p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.social_address ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 20px;
+}
+
+.social_address ul li {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.social_address ul li .icon_box {
+  background: var(--primary);
+  width: 100%;
+  height: 45px;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.social_address ul li svg {
+  width: 25px;
+}
+
+.social_address ul li a {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*
+------------------------------------------------------------
+Study Visa Page CSS
+------------------------------------------------------------
+*/
+.form_container {
+  position: relative;
+  top: -50px;
+  z-index: 9;
+}
+
+.form_wrapper {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+}
+
+.form_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.form_container {
+  overflow: hidden;
+  /* Ensure no overflow during animation */
+}
+
+.select_user p {
+  margin-bottom: 0;
+}
+
+.user_check {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.user_check label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.searchable_area {
+  padding: 50px 0;
+}
+
+.search_listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.search_item h4 {
+  font-size: 22px;
+  color: var(--primary);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  display: inline-block;
+}
+
+.search_item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #e5e5e5;
+  max-height: 230px;
+  min-height: 230px;
+  overflow: auto;
+  background: var(--silver);
+}
+
+.search_item ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search_item ul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search_item ul::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+
+
+.search_item ul li a {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  line-height: 1;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.search_item ul li:hover a {
+  background: var(--primary);
+  color: #fff;
+}
+
+.search_item ul li a svg {
+  transition: .3s;
+  font-size: 20px;
+}
+
+.search_item ul li:hover a svg {
+  transform: translateX(6px);
+}
+
+.eligibility_area {
+  background: linear-gradient(to left, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(assets/images/about-breadcrumb.jpg);
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.eligibility_area .sub_heading h2 {
+  color: #fff;
+}
+
+.eligibility_area .sub_heading h2 span {
+  color: tomato;
+}
+
+.eligibility_area .sub_heading p {
+  color: #fff;
+}
+
+.eligibility_area a {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.eligibility_area .custom_btn {
+  background: var(--bs-danger);
+  border-color: transparent;
+  color: var(--bs-white);
+}
+
+.study_visa_page .coaching_page_area {
+  margin-top: 70px;
+}
+
+.page_content_area {
+  padding: 60px 0;
+}
+
+.page_content_area ul li {
+  position: relative;
+}
+
+.page_content_area ul li::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: 8px;
+  background: #222;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+  background-color: var(--primary);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--bs-accordion-transition);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #dc5d35;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(3deg) brightness(105%) contrast(107%);
+}
+
+.study_visa_page .page_content_area {
+  background: #f3f2ff;
+  padding: 100px 0;
+}
+
+.sub_heading p {
+  text-align: center;
+}
+
+.select_user {
+  display: flex;
+  gap: 20px;
+}
+
+.select_user label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+p.error {
+  color: red;
+  margin-bottom: 0;
+}
+
+.contact_area {
+  padding: 80px 0 0;
+  padding-bottom: 60px;
+  background: var(--silver);
+}
+
+/*
+------------------------------------------------------------
+Potential area CSS
+------------------------------------------------------------
+*/
+.potential_area {
+  padding-bottom: 80px;
+}
+
+.potential_area .row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.potential_content {
+  padding: 30px;
+  background: aliceblue;
+  height: 100%;
+}
+
+.potential_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.improve_table {
+  padding: 60px 0;
+}
+
+/*
+------------------------------------------------------------
+Visit Visa page CSS
+------------------------------------------------------------
+*/
+.choose_country_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+
+.choose_country_item::-webkit-scrollbar {
+  width: 6px;
+}
+
+.choose_country_item::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.choose_country_item::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+  height: 25px;
+}
+
+.choose_country_item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: aliceblue;
+  border: 1px solid #e5e5e6;
+  max-height: 190px;
+  overflow: auto;
+}
+
+.choose_country_item ul li a {
+  padding: 6px 10px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: .3s;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+.choose_country_item ul li:hover a {
+  background: var(--primary);
+  color: #fff;
+  transition: .3s;
+}
+
+.choose_country_item ul li a span,
+.choose_country_item ul li a svg {
+  transition: .3s;
+}
+
+.choose_country_item ul li:hover a span,
+.choose_country_item ul li:hover a svg {
+  transition: .3s;
+  transform: translateX(6px);
+}
+
+
+
+
+
+
+.country_content_wrap {
+  display: grid;
+  gap: 10px;
+}
+
+.country_content_wrap ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+.country_content_wrap ul li {
+  display: flex;
+  gap: 10px;
+  font-family: var(--bodyFont);
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+}
+
+.country_content_wrap ul li p {
+  margin-bottom: 0;
+}
+
+.country_content_wrap p {
+  font-family: var(--bodyFont);
+  font-size: 15px;
+  font-weight: 400;
+  color: #222;
+}
+
+.country_content_wrap ul li svg {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToTop {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/*
+------------------------------------------------------------
+Job Assistance CSS
+------------------------------------------------------------
+*/
+.job_search_assistance {
+  padding-bottom: 60px;
+}
+
+.job_assistance_list ul {
+  display: grid;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.job_assistance_list ul li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.job_assistance_list ul li svg {
+  color: green;
+}
+
+.job_assistance_list ul li span {
+  font-weight: 500;
+  color: #121212;
+}
+
+.expert_team {
+  padding: 40px 0 60px;
+}
+
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/
+.get_overseas {
+  margin-bottom: 60px;
+}
+
+.get_overseas_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.get_overseas_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.get_overseas_wrapper {
+  background: var(--primary);
+}
+
+.content_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.get_overseas_info {
+  padding: 0 30px;
+  color: #fff;
+}
+
+.get_overseas_info h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/*
+------------------------------------------------------------
+world_talent  CSS
+------------------------------------------------------------
+*/
+.world_talent {
+  margin-bottom: 60px;
+}
+
+.world_wrapper {
+  background: #1b7287;
+  display: flex;
+  align-items: center;
+}
+
+.world_info {
+  padding: 0 30px;
+  flex: 1;
+  color: #fff;
+}
+
+.world_info h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.country_content_wrap h2 {
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 32px;
+}
+
+.country_content_wrap h3 {
+  font-size: 26px;
+  font-weight: 800;
+  font-family: var(--paraFont);
+}
+
+.country_content_wrap h2 span {
+  text-transform: capitalize;
+}
+
+.accordion-body ul li {
+  position: relative;
+}
+
+.accordion-body ul li::after {
+  content: "";
+  background: #222;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: -15px;
+  top: 9px;
+}
+
+.page_content .accordion-body ul {
+  padding: inherit;
+}
+
+/*
+------------------------------------------------------------
+Eligibility CSS
+------------------------------------------------------------
+*/
+.check_eligibility {
+  padding: 60px 0;
+}
+
+.check_eligibility_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.check_eligibility_info {
+  background: #005bbf;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.check_eligibility_info .visa_content {
+  background: transparent;
+  padding: 30px;
+  color: #fff;
+}
+
+.check_eligibility_info .visa_content .custom_btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.check_eligibility_info .visa_content .custom_btn:hover {
+  background: #fff;
+  border-color: transparent;
+  color: #005bbf;
+}
+
+.evaluated_list ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.evaluated_list ul li {
+  flex: 1;
+  text-align: center;
+}
+
+.evaluated_list ul li .evaluated_icon {
+  background: var(--primary);
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  font-size: 46px;
+  color: #fff;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.evaluated_title span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+  color: var(--primary);
+}
+
+
+
+/*
+------------------------------------------------------------
+Immigration Update CSS
+------------------------------------------------------------
+*/
+.immigration_update {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.updates_content {
+  background: #006480;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.updates_content .visa_content {
+  background: transparent;
+  padding: 30px;
+  width: 90%;
+  margin: auto;
+  color: #fff;
+}
+
+.updates_content .visa_content>ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.updates_content .visa_content ul li a button {
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: #fff;
+  border-color: #fff;
+}
+
+.updates_content .visa_content ul li a:hover button {
+  background: #fff;
+  color: #006480;
+}
+
+/*
+------------------------------------------------------------
+Page Content CSS
+------------------------------------------------------------
+*/
+.page_content h2 {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.page_content div ul {
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.page_content ul li {
+  position: relative;
+  font-weight: 400;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.page_content ul li svg {
+  width: 16px;
+}
+
+.page_content p {
+  font-weight: 400;
+  color: #000;
+
+}
+
+.page_content ul li p {
+  margin-bottom: 0;
+  flex: 1;
+  font-weight: 500;
+  font-family: var(--paraFont);
+  font-size: 15px;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub_list ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.page_content .page_title h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sub_list ul li {
+  border-right: 1px solid #e5e5e5;
+  padding-right: 30px;
+}
+
+.social_link ul {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+}
+
+.social_link ul li a img {
+  width: 30px;
+}
+
+.evaluation_page {
+  padding: 100px 0 0;
+}
+
+.evaluation_page .card {
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.product_list {
+  display: grid;
+  gap: 15px;
+}
+
+.product-items {
+  background: aliceblue;
+  padding: 15px;
+}
+
+.product_info h4 {
+  font-size: 14px;
+}
+
+.product-items {
+  background: aliceblue;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product_info p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.evaluation_content {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  padding: 0 30px 30px;
+}
+
+.evaluation_content h3 {
+  margin-bottom: 17px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.evaluation_social_link {
+  padding-top: 20px;
+}
+
+.evaluation_social_link ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.evaluation_social_link ul li:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.evaluation_social_link ul li a {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: baseline;
+  color: #121212;
+  font-size: 14px;
+}
+
+.page_content p {
+  font-weight: 400;
+  color: #000;
+}
+
+/*
+------------------------------------------------------------
+Careers page CSS
+------------------------------------------------------------
+*/
+.career_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.career_info {
+  background: #00918c;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  height: 100%;
+}
+
+.career_info .sub_heading h2 {
+  color: #ffffff;
+}
+
+.career_info .custom_btn {
+  color: #ffffff;
+  transition: .3s;
+  border: 2px solid #ffffff;
+}
+
+.career_info .custom_btn:hover {
+  background: #fff;
+  color: var(--primary);
+  border-color: transparent;
+}
+
+.intro_section h6 {
+  margin-bottom: 30px;
+}
+
+.intro_section ul {
+  display: grid;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.intro_section ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.intro_section ul li svg {
+  width: 23px;
+  color: var(--bs-white);
+}
+
+.intro_section ul li p {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro_section .row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.career_grow_wrapper {
+  background: var(--silver);
+  padding: 60px 0;
+}
+
+.career_grow_wrapper ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.career_grow_wrapper ul li {
+  position: relative;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.career_grow_wrapper ul li::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background: #121212;
+  position: absolute;
+  top: 6px;
+  right: -15px;
+}
+
+.career_grow_wrapper ul li:last-child::after {
+  display: none;
+}
+
+.career_info.text-left {
+  background: #00003f;
+}
+
+.career_earn {
+  padding: 60px 0;
+}
+
+.career_benefits {
+  background: var(--primary);
+  padding: 60px 0;
+  color: #fff;
+  margin-top: 100px;
+}
+
+.career_benefits .sub_heading h2 {
+  color: var(--bs-white);
+}
+
+.career_benefits ul {
+  display: flex;
+  flex-flow: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+.career_benefits ul li {
+  flex: 30%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.career_benefits .sub_heading.text-center {
+  margin-bottom: 50px;
+}
+
+.career_benefits ul li span {
+  font-weight: 500;
+}
+
+.career_opp_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.career_opp_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.career_opp_img span {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  display: block;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+}
+
+.career-opportunities {
+  padding: 60px 0;
+}
+
+.career_cutting_technology {
+  padding: 60px 0;
+  background: var(--silver);
+}
+
+.cutting_wrap {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  gap: 20px;
+}
+
+.cutting_img ul {
+  display: grid;
+  gap: 20px;
+}
+
+.cutting_img ul li .img_box {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  height: 120px;
+}
+
+.cutting_img ul li .img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.career_meritocracy {
+  padding: 60px 0;
+}
+
+.career_work {
+  background: var(--silver);
+  padding: 60px 0;
+}
+
+.career_work .card {
+  position: relative;
+  padding: 30px;
+  height: 150px;
+  background: var(--primary);
+  color: #fff;
+}
+
+.intro_section.safe_container .career_info {
+  background: #0cb89c !important;
+}
+
+.intro_section.safe_container .career_info p {
+  text-align: left;
+}
+
+.career_work .card .card_icon svg {
+  font-size: 46px;
+  margin-bottom: 15px;
+  filter: invert(16%) sepia(28%) saturate(2440%) hue-rotate(218deg) brightness(89%) contrast(93%);
+}
+
+.career_work .card .card_title h4 {
+  font-size: 16px;
+}
+
+.honest_career ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.career_benefits ul li span {
+  font-weight: 500;
+  width: 100%;
+}
+
+.honest_career ul li svg {
+  font-size: 20px;
+}
+
+.accordion-item h2 {
+  margin-bottom: 0;
+}
+
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/
+/*
+------------------------------------------------------------
+Google fonts CDN
+------------------------------------------------------------
+*/

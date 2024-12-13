@@ -1,0 +1,50 @@
+/* 
+------------------------------------------------------------
+Breadcrumb CSS 
+------------------------------------------------------------
+*/
+.bread_crumb_area {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 150px);
+  background-size: cover !important;
+  background-position: 100% 50% !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  aspect-ratio: 1/1;
+}
+
+.bread_crumb_area::after {
+  content: "";
+  background: linear-gradient(45deg, #2f2a60cf, #4b43a37d);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.breadcrumb-item a {
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-item.active {
+  color: rgb(255 226 0 / 75%) !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: rgb(255 255 255 / 75%) !important;
+  content: var(--bs-breadcrumb-divider, "/");
+}

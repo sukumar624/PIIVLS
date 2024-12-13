@@ -1,0 +1,10 @@
+.form_container form {
+    padding: 50px;
+    background: linear-gradient(45deg, #f5f2f2, #e9e9e9);
+}
+.form_container form label {
+    color: var(--primry);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,41 @@
+.coaching_page_area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.coaching_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coaching_info {
+    background: var(--primary);
+    padding: 30px;
+    color: #fff;
+}
+
+.coaching_info ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+    gap: 20px;
+}
+
+.coaching_info ul li a {
+    border: 1px solid #fff;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    color: #ffff;
+    transition: .3s;
+}
+
+.coaching_info ul li:hover a {
+    background: #fff;
+    color: var(--primary);
+    border-color: transparent;
+}

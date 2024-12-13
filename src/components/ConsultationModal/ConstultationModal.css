@@ -1,0 +1,33 @@
+.toggle-switch {
+    width: 50px;
+    height: 25px;
+    position: relative;
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-switch:checked {
+    background-color: #007bff;
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2.5px;
+    left: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-switch:checked::before {
+    left: 25px;
+}

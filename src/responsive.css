@@ -1,0 +1,134 @@
+@media (max-width:2000px) {
+    .our_service_wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .navbar .navbar-nav a {
+        padding: 14px 20px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .our_service_wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .navbar .navbar-nav {
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+        line-height: 1;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar .navbar-nav li a {
+        background: #fff;
+        color: var(--primary);
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu.show {
+        width: 204px;
+        width: 100vw;
+    }
+
+    .assessment_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about_img {
+        padding-right: 0;
+    }
+
+    .hero_content {
+        padding: 60px 0 130px;
+    }
+
+    .navbar {
+        padding: 10px 0 !important;
+        background: var(--primary) !important;
+    }
+
+    .header_contact {
+        display: none;
+    }
+
+    .form_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .form_container form {
+        padding: 50px 20px;
+    }
+
+    .search_wrapper form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .process_wrapper {
+        gap: 60px;
+    }
+
+    .visa_card_page {
+        grid-template-columns: 1fr;
+    }
+
+    .visa_link ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .coaching_page_area {
+        grid-template-columns: 1fr;
+    }
+
+    .choose_wrapper {
+        gap: 60px;
+    }
+
+    .our_location_area {
+        position: relative;
+    }
+
+    .study_visa_page .page_content_area {
+        padding: 100px 0 0;
+    }
+
+    .location_wrapper {
+        display: grid;
+        text-align: center;
+    }
+
+    .location_info p {
+        text-align: center;
+    }
+
+    .input_box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bread_crumb_area {
+        height: 250px;
+        object-fit: cover !important;
+        background-size: cover !important;
+    }
+
+    .form_container {
+        position: relative;
+        top: 0;
+        z-index: 9;
+        padding-top: 50px;
+    }
+}

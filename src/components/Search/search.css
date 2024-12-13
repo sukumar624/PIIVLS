@@ -1,0 +1,10 @@
+.search_wrapper form {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 30px;
+}
+
+.search_area {
+    background: var(--silver);
+    padding: 60px 0;
+}
