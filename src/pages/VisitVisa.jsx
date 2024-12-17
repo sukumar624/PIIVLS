@@ -27,6 +27,7 @@ const visaLinks = {
         { href: "/visit-visa/belgium", label: "Belgium Tourist Visa" },
         { href: "/visit-visa/brazil", label: "Brazil Tourist Visa" },
         { href: "/visit-visa/canada", label: "Canada Tourist Visa" },
+        { href: "/visit-visa/canada-transit", label: "Canada Transit Visa" },
         { href: "/visit-visa/china", label: "China Tourist Visa" },
         { href: "/visit-visa/colombia", label: "Colombia Tourist Visa" },
         { href: "/visit-visa/cyprus", label: "Cyprus Tourist Visa" },
